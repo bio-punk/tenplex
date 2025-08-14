@@ -53,6 +53,8 @@ pytorch_flags() {
     echo -logdir logs-dyn-res-tde
 }
 
+export PATH=/usr/local/go/bin:/root/go/bin:$PATH
+
 # set -x
 tenplex-run $(tenplex_flags) 2>&1 | tee dyn-res-tenplex.log
 # exit

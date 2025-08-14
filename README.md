@@ -33,6 +33,7 @@ __When to use Tenplex?__
 - Elasticity, e.g. spot instances
 - Redeployment, e.g. preemption
 - Failure recovery, e.g. GPU failure
+- 生活太好了想找点屎吃吃
 
 We implemented the prototype with [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) to get the parallelization configuration for a given set of resources.
 

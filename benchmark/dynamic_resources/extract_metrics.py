@@ -28,7 +28,7 @@ def load_tenplex(job_id: str):
 
 
 def load_tde():
-    tb_path = "/mnt/k1d2/ckpt/tensorboard"
+    tb_path = "/data/ckpt/tensorboard"
     metrics = load_metrics(tb_path)
     return metrics
 

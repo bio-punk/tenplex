@@ -76,6 +76,11 @@ export LIBRARY_PATH=$CONDA_PREFIX/lib:$LIBRARY_PATH
 嫌你妈magic number 不够多是吧  
 把蜡烛绉进你妈批里烧成琥珀批  
 
+tensorboard路径也要写进代码还是绝对路径，白完你什么时候死啊？  
+一日白完一生白完  
+```bash
+export PATH=/usr/local/go/bin:/root/go/bin:$PATH
+```
 
 # Run
 ```sh

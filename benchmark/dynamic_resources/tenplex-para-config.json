@@ -13,5 +13,10 @@
         "dp_size": 2,
         "pp_size": 4,
         "mp_size": 2
+    },
+    "32": {
+        "dp_size": 4,
+        "pp_size": 4,
+        "mp_size": 2
     }
 }

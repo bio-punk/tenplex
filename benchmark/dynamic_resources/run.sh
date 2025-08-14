@@ -55,13 +55,14 @@ pytorch_flags() {
 
 # set -x
 tenplex-run $(tenplex_flags) 2>&1 | tee dyn-res-tenplex.log
-exit
+# exit
 python extract_metrics.py -t dyn-res-tenplex
-exit
+# exit
 tenplex-run $(tenplex_dp_flags) 2>&1 | tee dyn-res-tenplex-dp.log 
 python extract_metrics.py -t dyn-res-tenplex-dp
 
-sudo rm -fr /mnt/k1d2/ckpt/*
+mkdir -p /data/tensorboard
+sudo rm -fr /data/tensorboard/*
 tenplex-run $(pytorch_flags) 2>&1 | tee dyn-res-tde.log
 python extract_metrics.py -t dyn-res-tde
 

@@ -25,6 +25,50 @@ g0017
 ```
     echo -detect-self-ip bond0
 ```
+
+## sb白完去你妈的数据集也不说放哪了
+补充nccl环境
+```
+conda install \
+    -c nvidia/label/cuda-12.4.0/linux-64 \
+    -c conda-forge \
+    -c pytorch \
+    cuda-nvrtc \
+    cuda-cudart \
+    cuda-version=12.4 \
+    cuda-nvcc \
+    cuda-cudart-dev \
+    cuda-nvtx \
+    libcusparse-dev \
+    libcublas-dev \
+    libcusolver-dev \
+    libcurand-dev \
+    cuda-nvvm-tools \
+    "numpy<2" -y
+conda install \
+    -c nvidia/label/cuda-12.4.0/linux-64 \
+    -c conda-forge \
+    -c pytorch \
+    cuda-cccl \
+    cuda-cccl_linux-64 \
+    cuda-crt-dev_linux-64 \
+    cuda-crt-tools \
+    cuda-cudart-dev_linux-64 \
+    cuda-cudart-static_linux-64 \
+    cuda-cudart_linux-64 \
+    cuda-driver-dev_linux-64 \
+    cuda-nvcc \
+    cuda-nvcc-dev_linux-64 \
+    cuda-nvcc-impl \
+    cuda-nvcc-tools \
+    cuda-nvcc_linux-64 \
+    cuda-nvvm-dev_linux-64 \
+    cuda-nvvm-impl \
+    cuda-nvvm-tools \
+    cuda-opencl \
+    cuda-version=12.4
+```
+
 # Run
 ```sh
 ./run.sh

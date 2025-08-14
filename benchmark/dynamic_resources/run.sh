@@ -55,7 +55,7 @@ pytorch_flags() {
 
 set -x
 tenplex-run $(tenplex_flags) 2>&1 | tee dyn-res-tenplex.log
-exit
+# exit
 python extract_metrics.py -t dyn-res-tenplex
 
 tenplex-run $(tenplex_dp_flags) 2>&1 | tee dyn-res-tenplex-dp.log 

@@ -5,19 +5,8 @@ You can find the Tenplex paper at [https://arxiv.org/abs/2312.05181](https://arx
 
 ## About
 Tenplex let's you train a model with multi-dimensional parallelism, i.e. tensor, data, and pipeline parallelism, resource-independently. That means you can change the resources during the training without affecting convergence.  
-真的服了你们几个脑瘫  
 不想开源可以只发sosp不发github的  
-文档瞎鸡巴乱写一通  
-不会写文档可以不写  
-大家时间很宝贵  
-可以读makefile的  
-  
-吃屎吃多了不爽？  
-一个人一辈子要吃多少屎才会同时用gloo和ib？  
-网卡的名字都要写进二进制？
-go批真是  
-善于解决其他语言里不存在的问题  
-这辈子没写过代码？
+
 网卡文件路径 ```tenplex-run/job/tasks.go``` 第63行
 ```go
 	if UseIB {
@@ -33,7 +22,7 @@ __When to use Tenplex?__
 - Elasticity, e.g. spot instances
 - Redeployment, e.g. preemption
 - Failure recovery, e.g. GPU failure
-- 生活太好了想找点屎吃吃
+- 生活太好了
 
 We implemented the prototype with [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) to get the parallelization configuration for a given set of resources.
 

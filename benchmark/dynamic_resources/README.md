@@ -26,7 +26,7 @@ g0017
     echo -detect-self-ip bond0
 ```
 
-## sb白完去你妈的数据集也不说放哪了
+## 数据集也不说放哪了
 补充nccl环境
 ```
 conda install \
@@ -71,13 +71,7 @@ conda install conda-forge::cudnn=8
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 export LIBRARY_PATH=$CONDA_PREFIX/lib:$LIBRARY_PATH
 ```
-日了你妈的一句命令能解决的事非得写成python  
-写成python也就算了，还你妈逼的写进代码里  
-嫌你妈magic number 不够多是吧  
-把蜡烛绉进你妈批里烧成琥珀批  
 
-tensorboard路径也要写进代码还是绝对路径，白完你什么时候死啊？  
-一日白完一生白完  
 ```bash
 export PATH=/usr/local/go/bin:/root/go/bin:$PATH
 ```

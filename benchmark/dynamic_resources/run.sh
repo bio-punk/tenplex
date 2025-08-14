@@ -53,11 +53,11 @@ pytorch_flags() {
     echo -logdir logs-dyn-res-tde
 }
 
-set -x
+# set -x
 tenplex-run $(tenplex_flags) 2>&1 | tee dyn-res-tenplex.log
-# exit
+exit
 python extract_metrics.py -t dyn-res-tenplex
-
+exit
 tenplex-run $(tenplex_dp_flags) 2>&1 | tee dyn-res-tenplex-dp.log 
 python extract_metrics.py -t dyn-res-tenplex-dp
 

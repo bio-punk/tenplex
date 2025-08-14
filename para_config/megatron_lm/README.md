@@ -1,5 +1,7 @@
 # Generate parallelisation configuration
 
+# 记得调整```gen_para_config.py``` 中的 ```host = ['nodename']```
+
 ## Example
 ```py
 python gen_para_config.py \

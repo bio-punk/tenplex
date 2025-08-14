@@ -12,6 +12,22 @@ Tenplex let's you train a model with multi-dimensional parallelism, i.e. tensor,
 大家时间很宝贵  
 可以读makefile的  
   
+吃屎吃多了不爽？  
+一个人一辈子要吃多少屎才会同时用gloo和ib？  
+网卡的名字都要写进二进制？
+go批真是  
+善于解决其他语言里不存在的问题  
+这辈子没写过代码？
+网卡文件路径 ```tenplex-run/job/tasks.go``` 第63行
+```go
+	if UseIB {
+		args = append(args,
+			`--device`, `/dev/infiniband`,
+			`--env`, `GLOO_SOCKET_IFNAME=bond0`,
+		)
+	}
+
+```
 
 __When to use Tenplex?__
 - Elasticity, e.g. spot instances
@@ -98,6 +114,15 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor | sud
 sudo apt update
 sudo apt install -y mlfs
 ```
+
+### 数据
+```
+mkdir -p /data/megatron-lm/gpt-2/enwiki/npzs_seq1024_new/
+wget https://tenplex.blob.core.windows.net/public/data/train.tf_record
+wget https://tenplex.blob.core.windows.net/tenplexcontainer/gpt_enwiki_indices.txt -O /data/megatron-lm/gpt-2/enwiki/npzs_seq1024_new/indices.txt
+```
+
+
 ## Examples
 Examples are in the `benchmark` directory. For instance, to run the dynamic resources benchmark in `benchmark/dynamic_resources`, just execute `./run.sh` in the directory.
 

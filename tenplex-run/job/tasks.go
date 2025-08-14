@@ -60,7 +60,7 @@ func (cluster *ContainerCluster) RunCtx(c Container, ctx context.Context) P {
 	if UseIB {
 		args = append(args,
 			`--device`, `/dev/infiniband`,
-			`--env`, `GLOO_SOCKET_IFNAME=ib0`,
+			`--env`, `GLOO_SOCKET_IFNAME=bond0`,
 		)
 	}
 	args = append(args, `-t`, cluster.Image)

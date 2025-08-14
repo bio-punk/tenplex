@@ -67,7 +67,15 @@ conda install \
     cuda-nvvm-tools \
     cuda-opencl \
     cuda-version=12.4
+conda install conda-forge::cudnn=8
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=$CONDA_PREFIX/lib:$LIBRARY_PATH
 ```
+日了你妈的一句命令能解决的事非得写成python  
+写成python也就算了，还你妈逼的写进代码里  
+嫌你妈magic number 不够多是吧  
+把蜡烛绉进你妈批里烧成琥珀批  
+
 
 # Run
 ```sh

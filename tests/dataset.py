@@ -23,6 +23,11 @@ def main():
             "-dp-size",  f"{dp_size}",
             "-job", job_id,
         ]
+
+        print(mount_cmd)
+        # exit(0)
+        cmd = " ".join(mount_cmd)
+        print(cmd)
         subprocess.run(mount_cmd, check=True)
         print("finished MLFS mount")
 

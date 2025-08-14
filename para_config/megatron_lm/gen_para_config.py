@@ -33,7 +33,7 @@ def create_training_args(model: str, size: str, precision: str, hosts: [str]) ->
 
     args = [
         "-image",
-        "kungfu.azurecr.io/mw-megatron-lm-23.06-update:v0.0.1",
+        "kungfu.azurecr.io/mw-megatron-lm-23.06-update:v0.0.3",
         "-user",
         user,
         "-mlfs-port",
@@ -103,6 +103,7 @@ def main():
     args = parser.parse_args()
     # hosts = ["10.10.10.1", "10.10.10.2", "10.10.10.3", "10.10.10.4"]
     hosts = ["g0011", "g0012", "g0013", "g0017"]
+    hosts = ["g0011"]
     home = os.path.expanduser("~")
     repo = os.path.join(home, "Tenplex/repo/transformer-checkpoint")
 

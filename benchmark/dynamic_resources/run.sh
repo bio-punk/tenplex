@@ -19,11 +19,11 @@ common_flags() {
     echo -precision "fp16"
     echo -index-url "/data/megatron-lm/gpt-2/enwiki/npzs_seq1024_new/indices.txt"
     echo -hosts "$(join $(hosts))"
-    echo -gpu-per-host 4
-    echo -gpu-per-container 4
+    echo -gpu-per-host 8
+    echo -gpu-per-container 8
     echo -seq-length 1024
     echo -time-based
-    echo -detect-self-ip ib0
+    echo -detect-self-ip bond0
     echo -seed 1234
     echo -no-shuffle
 }
@@ -53,7 +53,9 @@ pytorch_flags() {
     echo -logdir logs-dyn-res-tde
 }
 
+set -x
 tenplex-run $(tenplex_flags) 2>&1 | tee dyn-res-tenplex.log
+exit
 python extract_metrics.py -t dyn-res-tenplex
 
 tenplex-run $(tenplex_dp_flags) 2>&1 | tee dyn-res-tenplex-dp.log 

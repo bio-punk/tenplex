@@ -4,7 +4,14 @@ Tenplex is a state management library for DL systems that enables jobs to change
 You can find the Tenplex paper at [https://arxiv.org/abs/2312.05181](https://arxiv.org/abs/2312.05181)
 
 ## About
-Tenplex let's you train a model with multi-dimensional parallelism, i.e. tensor, data, and pipeline parallelism, resource-independently. That means you can change the resources during the training without affecting convergence.
+Tenplex let's you train a model with multi-dimensional parallelism, i.e. tensor, data, and pipeline parallelism, resource-independently. That means you can change the resources during the training without affecting convergence.  
+真的服了你们几个脑瘫  
+不想开源可以只发sosp不发github的  
+文档瞎鸡巴乱写一通  
+不会写文档可以不写  
+大家时间很宝贵  
+可以读makefile的  
+  
 
 __When to use Tenplex?__
 - Elasticity, e.g. spot instances
@@ -21,9 +28,17 @@ We implemented the prototype with [Megatron-LM](https://github.com/NVIDIA/Megatr
 
 ### Install tenplex-run
 ```bash
-git clone https://github.com/kungfu-team/tenplex
+git clone https://github.com/bio-punk/tenplex
 cd tenplex
 make install
+pip install .
+export PATH=~/go/bin:$PATH
+
+```
+
+### For image
+```bash
+docker 
 ```
 
 ### Install Tensor Store (mlfs)

@@ -38,7 +38,10 @@ export PATH=~/go/bin:$PATH
 
 ### For image
 ```bash
-docker 
+docker pull kungfu.azurecr.io/mw-megatron-lm-23.06-update:v0.0.3
+docker save -o /data/dockerimage/mw-megatron-lm-23.06-update_v0.0.3.tar mw-megatron-lm-23.06-update:v0.0.3
+# 其他节点执行
+docker load -i /data/dockerimage/mw-megatron-lm-23.06-update_v0.0.3.tar
 ```
 
 ### Install Tensor Store (mlfs)
